@@ -40,7 +40,7 @@ render(){return(<Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
   </Menu.Item>
 </SubMenu>
 <Menu.Item>
-<Button type="primary">Submit</Button>
+<Button type="primary" >Submit</Button>
 </Menu.Item>
 </Menu>)}
 }
