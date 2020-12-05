@@ -22,15 +22,3 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
-#    steps:
-#      - uses: actions/checkout@v2
-#      - run: npm ci && npm run build
-#      - uses: FirebaseExtended/action-hosting-deploy@v0
-#        with:
-#          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-#          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TELE2_BOOKING_TASK_647D1 }}'
-#          channelId: live
-#          projectId: tele2-booking-task-647d1
-#        env:
-#          FIREBASE_CLI_PREVIEWS: hostingchannels
