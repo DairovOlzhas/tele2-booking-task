@@ -1,14 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import {Layout, Menu, Breadcrumb} from 'antd';
-import {
-    DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
-    TeamOutlined,
-    UserOutlined,
-} from '@ant-design/icons';
+import {Layout, Breadcrumb} from 'antd';
 import MenuPage from '../component/MenuPage'
 
 const mystyle = {
@@ -17,7 +9,6 @@ const mystyle = {
     },
 };
 const {Header, Content, Footer, Sider} = Layout;
-const {SubMenu} = Menu;
 
 class HomePage extends React.Component {
     state = {
