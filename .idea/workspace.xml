@@ -4,9 +4,12 @@
     <list default="true" id="3e4198f8-4fca-4d23-b37c-fe0608729f42" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/MenuPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/MenuPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/hover.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/hover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607162752628</updated>
       <workItem from="1607162757014" duration="341000" />
+      <workItem from="1607226140381" duration="6496000" />
     </task>
     <servers />
   </component>
@@ -71,5 +75,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import './hover.css'
 import {Layout, Breadcrumb} from 'antd';
 import MenuPage from '../component/MenuPage'
+import {getFreePlaces, placeOrder} from "../services/db";
 
 const {Header, Content, Footer, Sider} = Layout;
 
@@ -15,7 +16,7 @@ class HomePage extends React.Component {
 
     onCollapse = collapsed => {
         console.log(collapsed);
-        this.setState({collapsed});
+        this.setState({collapsed: collapsed, selected_places: this.state.selected_places});
     };
 
     hoverOn = () => {
@@ -30,7 +31,9 @@ class HomePage extends React.Component {
         var id = event.currentTarget.id
         if(this.state.selected_places.includes(id)){
             event.currentTarget.setAttribute("fill", "#2f54eb")
-            this.state.selected_places = this.state.selected_places.filter(function(elem){ return elem!==id})
+            var collapsed = this.state.collapsed
+            var selected_places = this.state.selected_places.filter(function(elem){ return elem!==id})
+            this.setState({collapsed: collapsed, selected_places: selected_places})
         }else{
             event.currentTarget.setAttribute("fill", "#fff0f6")
             this.state.selected_places.push(id)
@@ -41,6 +44,7 @@ class HomePage extends React.Component {
 
     render() {
         const {collapsed} = this.state;
+        console.log(getFreePlaces(Date.now()-60*60, Date.now()))
         return (
             <Layout style={{minHeight: '100vh'}}>
                 <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
