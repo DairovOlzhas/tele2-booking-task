@@ -1,5 +1,5 @@
 import {db} from "./firebase";
-import firebase from 'firebase';
+
 
 export function getProducts() {
     return db.ref("products").once('value');
@@ -12,46 +12,46 @@ export function getProducts() {
 //     });
 // };
 
-export function placeOrder(placeId, startTime, endTime) {
-    var placeRef = db.collection(`places`)
-        .doc(placeId);
-    placeRef.update({
-        bookedIntervals: firebase.firestore.FieldValue.arrayUnion({
-            startTime: startTime,
-            endTime: endTime
-        })
-    })
-        .then(function () {
-            console.log("Document successfully written!");
-        })
-        .catch(function (error) {
-            placeRef.set({
-                bookedIntervals: {
-                    startTime: startTime,
-                    endTime: endTime
-                }
-            })
-            .then(function () {
-                console.log("Document successfully written!");
-            })
-            .catch(function(error) {
-                console.error("Error writing document: ", error);
-            })
-        });
-}
+// export function placeOrder(placeId, startTime, endTime) {
+//     var placeRef = db.collection(`places`)
+//         .doc(placeId);
+//     placeRef.update({
+//         bookedIntervals: firebase.firestore.FieldValue.arrayUnion({
+//             startTime: startTime,
+//             endTime: endTime
+//         })
+//     })
+//         .then(function () {
+//             console.log("Document successfully written!");
+//         })
+//         .catch(function (error) {
+//             placeRef.set({
+//                 bookedIntervals: {
+//                     startTime: startTime,
+//                     endTime: endTime
+//                 }
+//             })
+//             .then(function () {
+//                 console.log("Document successfully written!");
+//             })
+//             .catch(function(error) {
+//                 console.error("Error writing document: ", error);
+//             })
+//         });
+// }
 
 
-export function getFreePlaces(startTime, endTime) {
-    db.collection("places")
-        .where("bookedIntervals.$.startTime", "<=", endTime)
-        .where("bookedIntervals.$.endTime", ">=", startTime)
-        .get()
-        .then(function (querySnapshot) {
-            querySnapshot.foreach(function (doc) {
-                console.log(doc)
-            })
-        })
-}
+// export function getFreePlaces(startTime, endTime) {
+//     db.collection("places")
+//         .where("bookedIntervals.$.startTime", "<=", endTime)
+//         .where("bookedIntervals.$.endTime", ">=", startTime)
+//         .get()
+//         .then(function (querySnapshot) {
+//             querySnapshot.foreach(function (doc) {
+//                 console.log(doc)
+//             })
+//         })
+// }
 
 // export function readChats() {
 //     let abc = [];
